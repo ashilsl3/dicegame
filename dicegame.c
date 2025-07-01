@@ -4,6 +4,13 @@
 
 int main()
 {
+    char name[100];
+
+    printf("What is yout name?\n");
+    scanf("%99s", name);
+
+    printf("Hello, %s!\n", name);
+
     srand(time(NULL));
     printf("Rolling dice...\n");
     int die1 = (rand() % 6) + 1;
@@ -17,11 +24,11 @@ int main()
 
     if (total > 7)
     {
-        printf("You won\n");
+        printf("%s won!\n", name);
     }
     else
     {
-        printf("You lose\n");
+        printf("%s lost!\n", name);
     }
 
     return 0;
